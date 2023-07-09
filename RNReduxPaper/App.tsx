@@ -19,6 +19,7 @@ import {
 
 import {Colors, Header} from 'react-native/Libraries/NewAppScreen';
 import {Counter} from './src/features/counter/Counter';
+import {ActivityIndicator, ProgressBar, MD3Colors} from 'react-native-paper';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -73,6 +74,13 @@ function App(): JSX.Element {
           }}>
           <Section title="Redux">
             <Counter />
+          </Section>
+          <Section title="Paper">
+            <ActivityIndicator
+              animating={true}
+              color={MD3Colors.secondary50}
+              size={'large'}
+            />
           </Section>
         </View>
       </ScrollView>
